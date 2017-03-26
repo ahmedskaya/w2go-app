@@ -35,11 +35,101 @@
   <body ng-app="starter">
 
     <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
+      <ion-nav-bar class="bar bar-header bar-assertive" align-title="center">  
+          <ion-nav-back-button>
+          </ion-nav-back-button>
+          <ion-nav-title>
+              <img alt="W2Go Logo" src="img/logo.png" height="40">
+          </ion-nav-title>
+          <ion-nav-buttons side="left">
+              <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+              </button>
+          </ion-nav-buttons>
+          <!-- <ion-nav-buttons side="right">
+              <button class="button button-icon button-clear ion-gear-a" menu-toggle="right">
+              </button>
+          </ion-nav-buttons> -->
+      </ion-nav-bar>
+      <ion-content class="has-header padding fill-height">
+
+            <div class="row row-center">
+                <div class="col">
+                    <!-- Look at all the duplication!  Css mixins or an
+                         angular directive could help here. -->
+                    <button class="button button-outline button-positive">
+                        7
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-outline button-positive">
+                       8 
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-outline button-positive">
+                       9 
+                    </button>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                    <button class="button button-outline button-positive">
+                       4 
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-outline button-positive">
+                       5 
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-outline button-positive">
+                       6 
+                    </button>
+                </div>
+                
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                    <button class="button button-outline button-positive">
+                       1 
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-outline button-positive">
+                       2 
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-outline button-positive">
+                       3 
+                    </button>
+                </div>
+                
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                    <button class="button button-outline button-positive">
+                       CLR 
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-outline button-positive">
+                       0 
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-outline button-positive">
+                        =
+                    </button>
+                </div>
+                
+            </div>
+
       </ion-content>
+      <div class="bar bar-footer bar-assertive">
+        <div class="title">Submit your place to our list</div>
+      </div>
     </ion-pane>
   </body>
 </html>
