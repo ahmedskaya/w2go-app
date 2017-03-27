@@ -45,87 +45,19 @@
               <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
               </button>
           </ion-nav-buttons>
-          <!-- <ion-nav-buttons side="right">
-              <button class="button button-icon button-clear ion-gear-a" menu-toggle="right">
-              </button>
-          </ion-nav-buttons> -->
       </ion-nav-bar>
-      <ion-content class="has-header padding fill-height">
-
-            <div class="row row-center">
-                <div class="col">
-                    <!-- Look at all the duplication!  Css mixins or an
-                         angular directive could help here. -->
-                    <button class="button button-outline button-positive">
-                        7
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="button button-outline button-positive">
-                       8 
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="button button-outline button-positive">
-                       9 
-                    </button>
-                </div>
-            </div>
-            <div class="row row-center">
-                <div class="col">
-                    <button class="button button-outline button-positive">
-                       4 
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="button button-outline button-positive">
-                       5 
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="button button-outline button-positive">
-                       6 
-                    </button>
-                </div>
-                
-            </div>
-            <div class="row row-center">
-                <div class="col">
-                    <button class="button button-outline button-positive">
-                       1 
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="button button-outline button-positive">
-                       2 
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="button button-outline button-positive">
-                       3 
-                    </button>
-                </div>
-                
-            </div>
-            <div class="row row-center">
-                <div class="col">
-                    <button class="button button-outline button-positive">
-                       CLR 
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="button button-outline button-positive">
-                       0 
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="button button-outline button-positive">
-                        =
-                    </button>
-                </div>
-                
-            </div>
-
+      <ion-content class="has-header" ng-controller="homeGrid" ng-init="loadImages()">
+          <div class="row" ng-repeat="image in images" ng-if="$index % 4 === 0">
+              <div class="col" ng-if="$index < images.length">
+                  <img ng-src="{{images[$index].src}}" width="100%" />
+              </div>
+              <div class="col" ng-if="$index + 1 < images.length">
+                  <img ng-src="{{images[$index + 1].src}}" width="100%" />
+              </div>
+              <div class="col" ng-if="$index + 2 < images.length">
+                  <img ng-src="{{images[$index + 2].src}}" width="100%" />
+              </div>
+          </div>
       </ion-content>
       <div class="bar bar-footer bar-assertive">
         <div class="title">Submit your place to our list</div>
